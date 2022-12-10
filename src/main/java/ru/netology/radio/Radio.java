@@ -53,14 +53,18 @@ public class Radio {
     }
 
     public void increaseVolume() {
-        if(currentVolume < 10) {
+        if (currentVolume >= 10) {
+            currentVolume = 10;
+        } else {
             currentVolume = currentVolume + 1;
         }
     }
 
-    public void downVolume(){
-        if(currentVolume > 0){
+    public void downVolume() {
+        if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
+        } else {
+            currentVolume = 0;
         }
     }
 }
